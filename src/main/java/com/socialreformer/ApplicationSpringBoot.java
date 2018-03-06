@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/*import main.java.com.socialreformer.service.EventService;
-import main.java.com.socialreformer.service.EventServiceImpl;*/
+import main.java.com.socialreformer.service.EventService;
+import main.java.com.socialreformer.service.EventServiceImpl;
 
 
-@SpringBootApplication(scanBasePackages={"main.java.com.socialreformer/main.resources"})
+@SpringBootApplication(scanBasePackages={"main.java.com.socialreformer/maim.resources"})
 
 @ComponentScan
 public class ApplicationSpringBoot {

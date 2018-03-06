@@ -5,16 +5,13 @@ import java.util.List;
 import javax.annotation.Resource;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import main.java.com.socialreformer.Repository.CauseRepository;
 import main.java.com.socialreformer.Repository.ComplaintsRepository;
-import main.java.com.socialreformer.Repository.SocialOrganizationsRepository;
 import main.java.com.socialreformer.model.Cause;
 import main.java.com.socialreformer.model.Complaints;
-import main.java.com.socialreformer.model.SocialOrganizations;
 
 @Service
 public class ComplaintServiceImpl implements ComplaintService{

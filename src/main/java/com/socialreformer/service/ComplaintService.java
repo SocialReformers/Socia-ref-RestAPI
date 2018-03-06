@@ -4,7 +4,6 @@ import java.util.List;
 
 import main.java.com.socialreformer.model.Cause;
 import main.java.com.socialreformer.model.Complaints;
-import main.java.com.socialreformer.model.SocialOrganizations;
 
 public interface ComplaintService {
 	public List<Cause> retrieveCause();

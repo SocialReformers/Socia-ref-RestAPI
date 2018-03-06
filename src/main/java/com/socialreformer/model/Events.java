@@ -1,59 +1,44 @@
 package main.java.com.socialreformer.model;
 
-import java.sql.Date;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "EVENTS")
 public class Events {
-
+	
 	@Id
-	@Column(name = "EVENT_ID")
+	@Column(name="EVENT_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-
+	
 	private String name;
-
+	
 	private String description;
-
-	/*@Temporal(TemporalType.DATE)*/
-	@Column(name = "EVENT_DATE")
+	
+	@Column(name="EVENT_DATE")
 	private Date eventDate;
-
-	@Column(name = "CREATED_BY")
+	
+	@Column(name="CREATED_BY")
 	private Integer createdby;
-
+	
 	private String locality;
-
+	
 	private String city;
-
+	
 	private String state;
-
+	
 	private String details;
-
-	@Column(name = "NOTIFY_SENT")
+	
+	@Column(name="NOTIFY_SENT")
 	private String notificationSent;
-	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY,mappedBy = "event")
-	@JsonBackReference
-	private Set<UserEvents> userEvents;
-
-	public Events(){
-		
-	}
 
 	public Integer getId() {
 		return id;
@@ -134,13 +119,6 @@ public class Events {
 	public void setNotificationSent(String notificationSent) {
 		this.notificationSent = notificationSent;
 	}
-
-	public Set<UserEvents> getUserEvents() {
-		return userEvents;
-	}
-
-	public void setUserEvents(Set<UserEvents> userEvents) {
-		this.userEvents = userEvents;
-	}
+	
 	
 }

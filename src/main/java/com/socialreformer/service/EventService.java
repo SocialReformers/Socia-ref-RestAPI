@@ -1,7 +1,5 @@
 package main.java.com.socialreformer.service;
 
-import java.util.List;
-
 import main.java.com.socialreformer.model.Events;
 import main.java.com.socialreformer.model.UserEvents;
 

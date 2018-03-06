@@ -2,15 +2,10 @@ package main.java.com.socialreformer.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "USER_EVENTS")
@@ -71,6 +66,7 @@ public class UserEvents {
 	public void setEvent(Events event) {
 		this.event = event;
 	}
+	
 	
 
 }

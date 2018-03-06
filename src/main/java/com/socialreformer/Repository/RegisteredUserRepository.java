@@ -7,5 +7,4 @@ import main.java.com.socialreformer.model.RegisteredUser;
 @Repository
 public interface RegisteredUserRepository extends JpaRepository<RegisteredUser,Integer>{
 	public long countByEmailAddrAndPassword(String emailAddr,String password);
-
 }

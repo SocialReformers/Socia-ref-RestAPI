@@ -1,7 +1,5 @@
 package main.java.com.socialreformer.controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,28 +18,28 @@ import main.java.com.socialreformer.service.EventService;
 @RestController
 @RequestMapping(value="/socialReformer/events")
 public class EventRestController {
-	@Autowired
-	EventService eventService;
+    @Autowired
+    EventService eventService;
 
-	@PostMapping("/createEvent/events")
-	public Events createEvents(@Valid @RequestBody Events event) {
-		return eventService.createEvent(event);
-	}
+    @PostMapping("/createEvent/events")
+    public Events createEvents(@Valid @RequestBody Events event) {
+          return eventService.createEvent(event);
+    }
 
-	@PostMapping("/join/userevent")
-	public  UserEvents createComplaint(@Valid @RequestBody UserEvents userEvent) {
-		return eventService.joinEvent(userEvent);
-	}
+    @PostMapping("/join/userevent")
+    public  UserEvents createComplaint(@Valid @RequestBody UserEvents userEvent) {
+          return eventService.joinEvent(userEvent);
+    }
 
-	@RequestMapping(value="/participants",method=RequestMethod.GET)
-	public long noOfParticipants(@RequestParam(value="eventId",required=true) Integer eventId) {
-		return eventService.numberOfEventParticipants(eventId);
-	}
-	@RequestMapping(value="/nearYou",method=RequestMethod.GET)
-	public List<Events> retrieveEventsNearYou(@RequestParam(value="city",required=true) String city) {
-		List<Events> li=eventService.retrieveEventsNearYou(city);
-		return li;
-	}
-	
-	
+@RequestMapping(value="/participants",method=RequestMethod.GET)
+    public long noOfParticipants(@RequestParam(value="eventId",required=true) Integer eventId) {
+          return eventService.numberOfEventParticipants(eventId);
+    }
+   @RequestMapping(value="/nearYou",method=RequestMethod.GET)
+    public List<Events> retrieveEventsNearYou(@RequestParam(value="city",required=true) String city) {
+          List<Events> li=eventService.retrieveEventsNearYou(city);
+          return li;
+    }
+
+
 }
